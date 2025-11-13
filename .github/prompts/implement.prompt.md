@@ -60,39 +60,40 @@ Execute the unit tests to verify correctness:
 - Run tests using the appropriate test runner
 - Review test output and failures
 
-### 9. Fix and Iterate on Unit Tests
-Loop until all unit tests pass:
-- Fix implementation issues
-- Refine tests as needed
-- Ensure implementation is correct
-
-### 10. Write Integration and Regression Tests
-Create comprehensive tests:
-- Integration tests for API endpoints and service interactions
-- Regression tests for critical user flows
-- Contract tests for API specifications
-
-### 11. Run All Tests
-Execute the full test suite:
-- Run unit, integration, and regression tests
-- Verify ≥85% coverage threshold
-
 ### 12. Fix and Iterate on All Tests
 Loop until all tests pass:
 - Address test failures
 - Refine implementation
 - Ensure quality gates are met
 
-### 13. Write the MADR
-Create a Markdown Architectural Decision Record (MADR) in `specs\adr`:
-- Use sequential numbering (e.g., `0001-decision-title.md`)
-- Present **3 options** considered for the implementation
-- Document decision drivers and context
-- Explain why the chosen option was selected
-- Include consequences and trade-offs
-- This is critical for future maintainability
+### 13. Document Implementation Notes (if needed)
+If you encountered implementation details worth documenting:
+- Document minor technical decisions in code comments
+- Update relevant documentation in `/docs`
+- Add inline documentation for complex logic
 
-### 14. Update Documentation
+**Note**: If you discover that significant architectural decisions are needed during implementation:
+- **STOP** - Do not make major architectural decisions during implementation
+- **Hand back to `@architect`** to create proper ADRs first
+- Provide context: what decision is needed, what the blocker is
+- Wait for ADR creation and standards update before proceeding
+- This ensures architectural decisions are made deliberately with proper evaluation
+
+### 14. Verify UI Integration (Frontend Tasks Only)
+If implementing frontend features, verify system integration:
+- [ ] **Navigation**: Is this page/feature linked in global navigation?
+  - If navigation doesn't exist, note that a navigation task is needed
+  - If navigation exists, add link to your feature
+- [ ] **Layout**: Does this page use a consistent layout wrapper (e.g., AuthenticatedLayout)?
+  - Don't create isolated headers/footers per page
+  - Reuse shared layout components
+- [ ] **Discoverability**: Can users find this feature without typing URL manually?
+  - Test: Navigate from home → your feature → other features
+  - If dead-ends exist, add navigation links
+- [ ] **Authentication Flow**: Does login/logout work from this page?
+- [ ] **Consistent UX**: Does this page match design patterns of other pages?
+
+### 15. Update Documentation
 Write or update documentation following guidelines in `AGENTS.md`:
 - Update existing docs in `/docs` directory (do NOT create separate summaries)
 - Use MkDocs format (Markdown)
@@ -111,3 +112,8 @@ Before marking a task complete, verify:
 - ✅ Documentation updated in `/docs`
 - ✅ No secrets committed
 - ✅ Code follows team standards in `AGENTS.md`
+- ✅ **UI Integration (Frontend only)**:
+  - Feature accessible via navigation (or navigation task created)
+  - Uses consistent layout wrapper
+  - No dead-ends or orphaned pages
+  - Authentication flow works correctly
