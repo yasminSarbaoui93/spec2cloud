@@ -1,0 +1,170 @@
+{
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/hierarchy.schema.json",
+  "$defs": {
+    "techniqueAggregateDocument": {
+      "type": "object",
+      "properties": {
+        "device system document": {
+          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_system_document",
+          "type": "object",
+          "properties": {
+            "asset management identifier": {
+              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#asset_management_identifier",
+              "type": "string"
+            },
+            "device document": {  
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "allOf": [
+                  {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_document",  
+                    "type": "object",
+                    "properties": {
+                      "device identifier": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_identifier",
+                        "type": "string"
+                      },
+                      "device type": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_type",
+                        "type": "string"
+                      },
+                      "device specification": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_specification",
+                        "type": "string"
+                      },
+                      "model number": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#model_number",
+                        "type": "string"
+                      },
+                      "equipment serial number": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#equipment_serial_number",
+                        "type": "string"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "techniqueDocument": {
+      "type": "object",
+      "properties": {
+        "measurement aggregate document": {
+          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_aggregate_document",
+          "type": "object",
+          "properties": {
+            "measurement document": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_document",
+                "type": "object",
+                "properties": {
+                  "measurement identifier": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_document",
+                    "type": "string"
+                  },
+                  "measurement time": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_document",
+                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tDateTimeStampValue"
+                  },
+                  "device control aggregate document": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_control_aggregate_document",
+                    "type": "object",
+                    "properties": {
+                      "device control document": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_control_document",    
+                        "type": "array",
+                        "minItems": 1
+                      }
+                    }
+                  },
+                  "specimen document": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_document",
+                    "type": "object",
+                    "properties": {
+                      "specimen identifier": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_identifier",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "postprocessing aggregate document": {
+          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_aggregate_document",
+          "type": "object",
+          "properties": {
+            "experimental data identifier": {
+              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#experimental_data_identifier",
+              "type": "string"
+            },
+            "postprocessing document": {
+              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_document",
+              "type": "array",
+              "items": {
+                "properties": {
+                  "measurement identifier": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_identifier",                    
+                    "type": "string"
+                  },
+                  "postprocessing machine software data cube": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_machine_software_data_cube_document",
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#label",                          
+                        "type": "string"
+                      },
+                      "data source identifier": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#data_source_identifier",                          
+                        "type": "string"
+                      },
+                      "software version": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#software_version",
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "postprocessing machine software properties document": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_machine_software_properties_document",
+                    "type": "object"
+                  },
+                  "postprocessing data cube": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_data_cube",
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#label",                          
+                        "type": "string"
+                      },
+                      "data source identifier": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#data_source_identifier",                          
+                        "type": "string"
+                      },
+                      "software version": {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#software_version",
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "postprocessing properties document": {
+                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#postprocessing_properties_document",
+                    "type": "object"            
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

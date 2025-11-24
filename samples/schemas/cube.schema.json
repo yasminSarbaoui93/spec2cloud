@@ -1,0 +1,140 @@
+{
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/cube.schema.json",
+  "$defs": {
+    "tDatacube": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string"
+        },
+        "cube-structure": {
+          "$ref": "#/$defs/tDatacubeStructure"
+        },
+        "data": {
+          "$ref": "#/$defs/tDatacubeData"
+        }
+      }
+    },
+    "tDatacubeData": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/tDimensionData"
+        },
+        {
+          "$ref": "#/$defs/tMeasureData"
+        }
+      ]
+    },
+    "tDimensionData": {
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tDimensionArray"
+          }
+        }
+      },
+      "required": [
+        "dimensions"
+      ]
+    },
+    "tDimensionArray": {
+      "$comment": "homogenous array of data used in explicit dimension arrays",
+      "$ref": "#/$defs/tNumberArray"
+    },
+    "tNumberArray": {
+      "$comment": "homogenous array of numbers",
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "tMeasureData": {
+      "properties": {
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tMeasureArray"
+          }
+        }
+      },
+      "required": [
+        "measures"
+      ]
+    },
+    "tMeasureArray": {
+      "$comment": "homogenous array of data used in explicit measure arrays, may contain null values",
+      "$ref": "#/$defs/tNumberOrNullArray"
+    },
+    "tNumberOrNullArray": {
+      "$comment": "homogenous array of numbers, may contain null values",
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "tDatacubeStructure": {
+      "type": "object",
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tDatacubeComponent"
+          },
+          "uniqueItems": true
+        },
+        "measures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tDatacubeComponent"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "dimensions",
+        "measures"
+      ]
+    },
+    "tDatacubeComponent": {
+      "type": "object",
+      "properties": {
+        "@componentDatatype": {
+          "description": "Subset of XSD datatypes supported in simple models",
+          "default": "double",
+          "enum": [
+            "double",
+            "float",
+            "decimal",
+            "integer",
+            "byte",
+            "int",
+            "short",
+            "long",
+            "string",
+            "boolean",
+            "dateTime"
+          ]
+        },
+        "concept": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@componentDatatype",
+        "concept"
+      ]
+    }
+  }    
+}

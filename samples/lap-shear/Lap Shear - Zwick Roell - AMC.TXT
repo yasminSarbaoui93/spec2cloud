@@ -1,0 +1,20 @@
+Auftrags-Nr.:                           "2K PU-Form 41 wrapped- 1 day at RT- flushing volume test" 
+Prüfnorm:                               "" 
+Werkstoff:                              "Ecoat" 
+Prüfer:                                 "" 
+Prüfgeschwindigkeit:                    10 
+Einspannlänge bei Startposition:        110.00 
+Maschinendaten:                         "" 
+
+a{lo 0};b{lo 0};S{lo 0};Fmax  ;F{lo max};Kommentar                             ;dL @Fmax
+mm     ;mm     ;mm²    ;N     ;MPa      ;                                      ;mm      
+12.5   ;25     ;312.50 ;477.56;1.528    ;"80 cc- 100% SCF with streaking line" ;0.83    
+12.5   ;25     ;312.50 ;446.16;1.428    ;"90 cc- 100% SCF with streaking line" ;0.84    
+12.5   ;25     ;312.50 ;422.17;1.351    ;"100 cc- 100% SCF with streaking line";0.71    
+12.5   ;25     ;312.50 ;414.29;1.326    ;"110 cc- 100% SCF with streaking line";0.66    
+12.5   ;25     ;312.50 ;442.63;1.416    ;"120 cc- 100% SCF with streaking line";0.68    
+12.5   ;25     ;312.50 ;454.01;1.453    ;"130 cc- 100% SCF with streaking line";0.75    
+12.5   ;25     ;312.50 ;395.11;1.264    ;"140 cc- 100% SCF with streaking line";0.66    
+12.5   ;25     ;312.50 ;403.85;1.292    ;"150 cc- 100% SCF with streaking line";0.60    
+12.5   ;25     ;312.50 ;413.94;1.325    ;"160 cc- 100% SCF with streaking line";0.66    
+12.5   ;25     ;312.50 ;419.87;1.344    ;"170 cc- 100% SCF with streaking line";0.62    

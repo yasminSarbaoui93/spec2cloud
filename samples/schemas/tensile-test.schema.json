@@ -1,0 +1,1676 @@
+{
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/tensile-test.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "allOf": [
+    {
+      "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/asm"
+    },
+    {
+      "properties": {
+        "tensile test aggregate document": {
+          "allOf": [
+            {
+              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/hierarchy.schema.json#/$defs/techniqueAggregateDocument"              
+            },
+            {
+              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_test_aggregate_document",
+              "properties": {
+                "analyst": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#analyst",
+                  "type": "string"
+                  },
+                "test identifier": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_identifier",
+                  "type": "string"
+                  },
+                "test standard": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_standard",
+                  "type": "string"
+                  },
+                "material name": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#material_name",
+                  "type": "string"
+                  },
+                "material batch identifier": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#material_batch_id",
+                  "type": "string"
+                  },
+                "curing condition": {
+                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#curing_condition",
+                  "type": "string"
+                },
+                "tensile test document": {
+                  "type": "array",
+                  "items": {
+                    "allOf": [
+                      {
+                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/hierarchy.schema.json#/$defs/techniqueDocument"              
+                      },
+                      {
+                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_test_document",
+                        "properties": {
+                          "measurement aggregate document": {
+                            "properties": {
+                              "experimental data identifier": {
+                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#experimental_data_identifier",
+                                "type": "string"
+                              },
+                              "measurement document": {
+                                "items": {
+                                  "properties": {
+                                    "ambient temperature": {
+                                      "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#ambient_temperature",
+                                      "type": "object",
+                                      "allOf": [
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                        },
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/degC"
+                                        }
+                                      ]
+                                    },
+                                    "ambient humidity": {
+                                      "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#ambient_humidity",
+                                      "type": "object",
+                                      "allOf": [
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                        },
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/%25"
+                                        }
+                                      ]
+                                    },
+                                    "device control aggregate document": {
+                                      "properties": {
+                                        "device control document": {
+                                          "items": {
+                                            "properties": {
+                                              "temperature control state": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#temperature_control_state",    
+                                                "type": "string",
+                                                "enum": ["controlled", "uncontrolled"]
+                                              },
+                                              "humidity control state": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#humidity_control_state",   
+                                                "type": "string",
+                                                "enum": ["controlled", "uncontrolled"]
+                                              },
+                                                "position control type": {
+                                                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#position_control_type",  
+                                                  "type": "string",
+                                                  "enum": ["extensometer", "crosshead"]
+                                              },
+                                              "gripping distance setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gripping_distance_setting",    
+                                                "type": "object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                  }
+                                                ]
+                                              },
+                                              "gauge length in longitudinal direction setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gauge_length_in_longitudinal_direction_setting",     
+                                                "type": "object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                  }
+                                                ]
+                                              },
+                                              "gauge length in transversal direction setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gauge_length_in_transversal_direction_setting",    
+                                                "type": "object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                  }
+                                                ]
+                                              },
+                                              "temperature setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#temperature_setting",     
+                                                "type": "object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/degC"
+                                                  }
+                                                ]
+                                              },
+                                              "humidity setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#humidity_setting",    
+                                                "type": "object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/%25"
+                                                  }
+                                                ]
+                                              },
+                                              "strain rate setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#strain_rate_setting",    
+                                                "type":"object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/~1s"
+                                                  },
+                                                  {
+                                                    "properties": {
+                                                      "strain type": {
+                                                        "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#strain_type",    
+                                                        "type": "string",
+                                                        "enum": ["engineering", "true"]
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "test speed setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_speed_setting",    
+                                                "type":"object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1min"
+                                                  }
+                                                ]
+                                              },
+                                              "load rate setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#load_rate_setting",    
+                                                "type":"object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N~1s"
+                                                  }
+                                                ]
+                                              },
+                                              "preload setting": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#preload_setting",    
+                                                "type":"object",
+                                                "allOf": [
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                  },
+                                                  {
+                                                    "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "specimen document": {
+                                      "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_document",
+                                      "type": "object",
+                                      "properties": {
+                                        "specimen notes": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_notes",
+                                          "type": "string"
+                                        },
+                                        "specimen orientation": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_orientation",
+                                          "type": "string"
+                                        },
+                                        "specimen type": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_type",
+                                          "type": "string"
+                                        },
+                                        "specimen thickness": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_thickness",    
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                            }
+                                          ]
+                                        },
+                                        "specimen width": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_width",    
+                                          "type": "object",                            
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                            }
+                                          ]
+                                        },
+                                        "specimen cross-section": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_cross-section",    
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm^2"
+                                            }
+                                          ]
+                                        },
+                                        "gauge length in longitudinal direction": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gauge_length_in_longitudinal_direction",    
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                            }
+                                          ]
+                                        },
+                                        "gauge length in transversal direction": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gauge_length_in_transversal_direction",    
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                            }
+                                          ]
+                                        },
+                                        "gripping distance": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#gripping_distance",    
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                            }
+                                          ]
+                                        },
+                                        "load rate": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#load_rate",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N~1s"
+                                            }
+                                          ]
+                                        },
+                                        "preload": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#preload",    
+                                          "type":"object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N"
+                                            }
+                                          ]
+                                        },
+                                        "specimen measurement instrument": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#specimen_measurement_instrument",
+                                          "type": "object",
+                                          "properties": {
+                                            "device identifier": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_identifier",    
+                                              "type": "string"
+                                            },
+                                            "device type": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_type",
+                                              "type": "string",
+                                              "enum": ["caliper", "measuring machine"]
+                                            },
+                                            "device specification": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#device_specification",
+                                              "type": "string"
+                                            },
+                                            "model number": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#model_number",
+                                              "type": "string"
+                                            },
+                                            "equipment serial number": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#equipment_serial_number",
+                                              "type": "string"
+                                            },
+                                            "analyst": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#analyst",
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "measurement data cube": {
+                                      "type": "object",
+                                      "allOf": [
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/cube.schema.json#/$defs/tDatacube"
+                                        },
+                                        {
+                                          "properties": {
+                                            "label": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measurement_data_cube",
+                                          "properties": {
+                                            "cube-structure": {
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#cube-structure",
+                                              "properties": {
+                                                "dimensions": {
+                                                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#dimensions",
+                                                  "minItems": 1,
+                                                  "maxItems": 1,
+                                                  "prefixItems": [
+                                                    {
+                                                      "properties": {
+                                                        "concept": {
+                                                          "const": "test time" ,
+                                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_time"
+                                                        },
+                                                        "unit": {
+                                                          "const": "s",
+                                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/s"
+                                                        },
+                                                        "@componentDatatype": {
+                                                          "const": "double"
+                                                        }
+                                                      }
+                                                    }
+                                                  ]  
+                                                },
+                                                "measures": {
+                                                  "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#measures",
+                                                  "minItems": 1,
+                                                  "contains": {
+                                                    "oneOf": [
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "longitudinal displacement",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#longitudinal_displacement"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "longitudinal displacement without correction",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#longitudinal_displacement_without_correction"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "crosshead displacement",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#crosshead_displacement"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "test force",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_force"
+                                                          },
+                                                          "unit": {
+                                                            "const": "N",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "transversal displacement",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#transversal_displacement"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "temperature",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#temperature"
+                                                          },
+                                                          "unit": {
+                                                            "const": "°C",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/degC"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "humidity",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#humidity"
+                                                          },
+                                                          "unit": {
+                                                            "const": "%",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/%25"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                } 
+                              }
+                            }
+                          },
+                          "postprocessing aggregate document": {
+                            "properties": {
+                              "postprocessing document": {
+                                "items": {
+                                  "properties": {
+                                    "postprocessing machine software data cube": {
+                                      "allOf": [
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/cube.schema.json#/$defs/tDatacube"
+                                        },
+                                        {
+                                          "properties": {
+                                            "cube-structure":{
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#cube-structure",                          
+                                              "properties": {
+                                                "dimensions": {
+                                                  "minItems": 1,
+                                                  "maxItems": 1,
+                                                  "prefixItems": [
+                                                    {
+                                                      "properties": {
+                                                        "concept": {
+                                                          "const": "test time",
+                                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#test_time"
+                                                        },
+                                                        "unit": {
+                                                          "const": "s",
+                                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/s"
+                                                        },
+                                                        "@componentDatatype": {
+                                                          "const": "double"
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                "measures": {
+                                                  "minItems": 1,
+                                                  "contains": {
+                                                    "oneOf": [
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering transverse strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_transverse_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true transverse strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_transverse_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering tensile stress",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_stress"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true tensile stress",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_stress"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "elastic engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#elastic_engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "plastic engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#plastic_engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "elastic true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#elastic_true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "plastic true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#plastic_true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering strain rate",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_strain_rate"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true strain rate",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_strain_rate"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "postprocessing machine software properties document": {
+                                      "properties": {
+                                        "Young's modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties" : {
+                                            "Young's modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "Young's modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "calculation type": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "string",
+                                                    "enum": ["Linear Least-Square regression", "chord", "tangent"]
+                                                  },  
+                                                  "start strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  }
+                                                }                   
+                                              }
+                                            }
+                                          }
+                                        },    
+                                        "secant modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#secant_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "secant modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#secant_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "secant modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/secant_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  } 
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },    
+                                        "chord modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#chord_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "chord modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#chord_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "chord modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/chord_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "start strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  },  
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  } 
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "tensile stress at x % tensile strain aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_stress_at_x_%_tensile_strain_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "tensile stress at x % tensile strain document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_stress_at_x_%_tensile_strain_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "engineering tensile stress": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/engineering_tensile_stress",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "engineering tensile strain": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  }
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "engineering tensile stress at break": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_stress_at_break",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at break": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_break",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "maximum tensile force": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#maximum_tensile_force",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile yield stress": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_yield_stress",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at yield": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_yield",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile yield stress": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_yield_stress",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strain at yield": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain_at_yield",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strain at strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain_at_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "Poisson's ratio": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Poissons_ratio",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "postprocessing data cube": {
+                                      "allOf": [
+                                        {
+                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/cube.schema.json#/$defs/tDatacube"
+                                        },
+                                        {
+                                          "properties": {
+                                            "cube-structure":{
+                                              "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#cube-structure",                          
+                                              "properties": {
+                                                "dimensions": {
+                                                  "minItems": 1,
+                                                  "maxItems": 1,
+                                                  "prefixItems": [
+                                                    {
+                                                      "properties": {
+                                                        "concept": {
+                                                          "const": "test time",
+                                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#time"
+                                                        },
+                                                        "unit": {
+                                                          "const": "s",
+                                                          "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/s"
+                                                        },
+                                                        "@componentDatatype": {
+                                                          "const": "double"
+                                                        }
+                                                      }
+                                                    }
+                                                  ]
+                                                },
+                                                "measures": {
+                                                  "minItems": 1,
+                                                  "contains": {
+                                                    "oneOf": [
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering transverse strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_transverse_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true transverse strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_transverse_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering tensile stress",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_stress"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true tensile stress",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_stress"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "elastic engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#elastic_engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "plastic engineering tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#plastic_engineering_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "elastic true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#elastic_true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "plastic true tensile strain",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#plastic_true_tensile_strain"
+                                                          },
+                                                          "unit": {
+                                                            "const": "mm/mm",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "engineering strain rate",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_strain_rate"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "properties": {
+                                                          "concept": {
+                                                            "const": "true strain rate",
+                                                            "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_strain_rate"
+                                                          },
+                                                          "unit": {
+                                                            "const": "MPa",
+                                                            "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                          },
+                                                          "@componentDatatype": {
+                                                            "const": "double"
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "postprocessing properties document": {
+                                      "properties": {
+                                        "Young's modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties" : {
+                                            "Young's modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "Young's modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Youngs_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "calculation type": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "string",
+                                                    "enum": ["Linear Least-Square regression", "chord", "tangent"]
+                                                  },  
+                                                  "start strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]       
+                                                  },  
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  }
+                                                }                   
+                                              }
+                                            }
+                                          }
+                                        },    
+                                        "secant modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#secant_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "secant modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#secant_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "secant modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/secant_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  } 
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },    
+                                        "chord modulus aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#chord_modulus_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "chord modulus document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#chord_modulus_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "chord modulus": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/chord_modulus",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "start strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#start_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  },  
+                                                  "end strain point": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#end_strain_point",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  } 
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "tensile stress at x % tensile strain aggregate document": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_stress_at_x_%_tensile_strain_aggregate_document",
+                                          "type": "object",
+                                          "properties": {
+                                            "tensile stress at x % tensile strain document": {
+                                              "type": "array",
+                                              "items": {
+                                                "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#tensile_stress_at_x_%_tensile_strain_document",
+                                                "type": "object",
+                                                "properties": {
+                                                  "engineering tensile stress": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/engineering_tensile_stress",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "engineering tensile strain": {
+                                                    "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain",
+                                                    "type": "object",
+                                                    "allOf": [
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                                      },
+                                                      {
+                                                        "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                                      }
+                                                    ]
+                                                  }
+                                                }                                    
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "engineering tensile stress at break": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_stress_at_break",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at break": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_break",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "maximum tensile force": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#maximum_tensile_force",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/N"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile yield stress": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_yield_stress",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at yield": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_yield",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile yield stress": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_yield_stress",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strain at yield": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain_at_yield",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "engineering tensile strain at strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#engineering_tensile_strain_at_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/MPa"
+                                            }
+                                          ]
+                                        },
+                                        "true tensile strain at strength": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#true_tensile_strain_at_strength",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        },
+                                        "Poisson's ratio": {
+                                          "$henkel.property-class": "http://ontobond.henkelgroup.io/ontology/entity#Poissons_ratio",
+                                          "type": "object",
+                                          "allOf": [
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json#/$defs/tQuantityValue"
+                                            },
+                                            {
+                                              "$ref": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json#/$defs/mm~1mm"
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "$henkel.manifest"
+  ]
+}

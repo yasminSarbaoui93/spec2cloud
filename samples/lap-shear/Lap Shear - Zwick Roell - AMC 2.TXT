@@ -1,0 +1,16 @@
+Heading:                                "Test report" 
+Test standard:                          "DIN EN 1465" 
+Type and designation:                   "E4/A2?" 
+Material :                              "Alu 2024 (qLap)" 
+Pre-treatment:                          "3h35°C" 
+Tester:                                 "OO" 
+Note:                                   "" 
+Machine data:                           "" 
+Test speed:                             10 
+Job no.:                                "" 
+
+Maximum force;Tensile shear strength;L   ;b   ;A   ;Comment
+N            ;MPa                   ;mm  ;mm  ;mm² ;       
+3390         ;13.6                  ;10  ;25  ;250 ;"CF"   
+3260         ;13.1                  ;10  ;25  ;250 ;"CF"   
+3780         ;15.1                  ;10  ;25  ;250 ;"CF"   

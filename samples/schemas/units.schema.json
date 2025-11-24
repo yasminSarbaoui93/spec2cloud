@@ -1,0 +1,641 @@
+{
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/units.schema.json",
+  "$defs": {
+    "ms": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "ms",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliS"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "s": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "s",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "degC": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "°C",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "K": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "K",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/K"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "degF": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "degF",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/DEG_F"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "microm": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "μm",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MicroM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mm": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "mm",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "cm": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "cm",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/CentiM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "in": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "in",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/IN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "m": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "m",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/M"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mg": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "mg",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliGM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "g": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "g",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/GM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kg": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "kg",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloGM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "tn": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "tn",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/TON"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mm^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "mm²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliM2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "cm^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "cm²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/CentiM2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "m^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "m²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/M2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "N": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/N"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kN": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kN",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "Pa": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "Pa",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/PA"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kPa": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "kPa",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloPA"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "MPa": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "MPa",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MegaPA"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "GPa": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "GPa",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/GigaPA"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "psi": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "psi",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/PSI"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "N~1m^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N/m²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/N-PER-M2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "N~1mm^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N/mm²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/N-PER-MilliM2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kN~1m^2": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kN/m²",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloN-PER-M2"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "%25": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "%",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/PERCENT"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mm~1mm": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "mm/mm",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/MilliM-PER-MilliM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "-": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "-",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/UNITLESS"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mJ": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "mJ",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliJ"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "J": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "J",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/J"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kJ": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kJ",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloJ"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "Nmm": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "Nmm",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/N-MilliM"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "Nm": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N·m",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/N-M"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kNm": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kN·m",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloN-M"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "J~1mm^3": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "J/mm³",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/J-PER-MilliM3"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "J~1cm^3": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "J/cm³",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/J-PER-CentiM3"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "J~1m^3": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "J/m³",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/J-PER-M3"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kJ~1m^3": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kJ/m³",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloJ-PER-M3"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mm~1s": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "mm/s",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliM-PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "mm~1min": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "mm/min",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/MilliM-PER-MIN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "m~1s": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "m/s",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/M-PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "m~1min": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "m/min",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/M-PER-MIN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "in~1min": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "in/min",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/IN-PER-MIN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "m~1h": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "m/h",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/M-PER-HR"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "km~1h": {
+      "properties": {
+        "unit": {
+            "type": "string",
+            "const": "km/h",
+            "$henkel.unit-uri": "http://qudt.org/vocab/unit/KiloM-PER-HR"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "~1s": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "/s",
+          "$henkel.unit-uri": "http://qudt.org/vocab/unit/PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "%25~1s": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "%/s",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/PERCENT-PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "N~1s": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N/s",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/N-PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kN~1s": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kN/s",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/KiloN-PER-SEC"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "N~1min": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "N/min",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/N-PER-MIN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    },
+    "kN~1min": {
+      "properties": {
+        "unit": {
+          "type": "string",
+          "const": "kN/min",
+          "$henkel.unit-uri": "http://ontobond.henkelgroup.io/ontology/qudt-ext/KiloN-PER-MIN"
+        }
+      },
+      "required": [
+        "unit"
+      ]
+    }
+  }
+}

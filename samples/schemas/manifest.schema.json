@@ -1,0 +1,39 @@
+{
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/manifest.schema.json",
+  "title": "Schema for manifests.",
+  "type": "object",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri",
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "@type": {
+      "type": "string",
+      "format": "uri",
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "vocabulary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    },
+    "json-schemas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "vocabulary",
+    "json-schemas"
+  ]
+}

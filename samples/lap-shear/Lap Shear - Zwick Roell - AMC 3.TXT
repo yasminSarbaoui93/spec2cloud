@@ -1,0 +1,5 @@
+Kraftmaximum;Befund;Kommentar     ;Dehnung;Zugscherfestigkeit;Bruchspannung;L   ;b   ;A   ;Angaben zum Bruch
+N           ;      ;              ;mm     ;MPa               ;MPa          ;mm  ;mm  ;mm² ;                 
+90.5        ;"100" ;"thin scf 10%";0.584  ;0.223             ;0.156        ;16.2;25  ;405 ;"scf"            
+84.5        ;"100" ;"thin scf 10%";0.494  ;0.211             ;0.148        ;16  ;25  ;400 ;"scf"            
+74.8        ;"100" ;"thin scf 10%";0.544  ;0.187             ;0.130        ;16  ;25  ;400 ;"scf"            

@@ -1,0 +1,70 @@
+{     
+  "$id": "https://aweudevclpmodellingsta01.z6.web.core.windows.net/tensile/v1.0/core.schema.json",
+  "$defs": {
+    "asm": {
+      "properties": {
+        "$henkel.manifest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "iri"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "type": "string",
+                  "format": "uri",
+                  "minItems": 1,
+                  "maxItems": 1
+                },
+                "@type": {
+                  "type": "string",
+                  "format": "uri",
+                  "minItems": 1,
+                  "maxItems": 1
+                },
+                "vocabulary": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "minItems": 1
+                },
+                "json-schemas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "vocabulary",
+                "json-schemas"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "tQuantityValue": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        }
+      },
+      "required": ["value", "unit"]
+    },
+    "tDateTimeStampValue": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }    
+}
